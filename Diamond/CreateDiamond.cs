@@ -37,7 +37,7 @@ namespace Diamond
                 //Create array of strings
                 string[] diamond = new string[52];
                 char user_letter;
-               
+
                 if (Regex.IsMatch(input, @"^[0-9*#+]+$"))
                 {
                     return (int)ExitCode.BadInput;
@@ -46,14 +46,12 @@ namespace Diamond
                 {
                     Console.WriteLine("Please enters a Letter: ");
                     user_letter = Console.ReadKey().KeyChar;
-
-                    //Convert all letters in upper
                 }
                 else
                 {
                     user_letter = char.Parse(input);
                 }
-               
+                //Convert all letters in upper
                 user_letter = Char.ToUpper(user_letter);
                
                 //search for letter number in to the array letter
