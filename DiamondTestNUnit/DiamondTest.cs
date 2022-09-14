@@ -29,17 +29,6 @@ namespace DiamondTestNUnit
             Assert.That(result, Is.EqualTo(400));
         }
         /// <summary>
-        /// created test case with empty value
-        /// </summary>
-        [Test]
-        public static void DiamondTestWithEmptyValue()
-        {
-            //Check with empty string and will return status code 400 as it is invalid value
-            string input = Constant.emptyString;
-            int result = CreateDiamond.DiamondMaking(input);
-            Assert.That(result, Is.EqualTo(400));
-        }
-        /// <summary>
         /// created test for exception occured
         /// </summary>
         [Test]

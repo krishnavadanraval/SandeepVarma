@@ -36,17 +36,26 @@ namespace Diamond
                 int letter_number = 0;
                 //Create array of strings
                 string[] diamond = new string[52];
-                Console.Write("Please enters a Letter: ");              
+                char user_letter;
                
-                if (string.IsNullOrEmpty(input) || Regex.IsMatch(input, @"^[0-9*#+]+$"))
+                if (Regex.IsMatch(input, @"^[0-9*#+]+$"))
                 {
                     return (int)ExitCode.BadInput;
                 }
-                char user_letter = char.Parse(input);
-                //char user_letter = Console.ReadKey().KeyChar;
-                //Convert all letters in upper
+                if (string.IsNullOrEmpty(input))
+                {
+                    Console.WriteLine("Please enters a Letter: ");
+                    user_letter = Console.ReadKey().KeyChar;
+
+                    //Convert all letters in upper
+                }
+                else
+                {
+                    user_letter = char.Parse(input);
+                }
+               
                 user_letter = Char.ToUpper(user_letter);
-                Console.WriteLine("");
+               
                 //search for letter number in to the array letter
                 for (int i = 0; i < letter.Length; i++)
                 {
